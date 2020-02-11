@@ -114,10 +114,8 @@ public class Login extends AppCompatActivity {
     private void sendInfoToActivity() {
         usersEntity = usersRoom.usersDao().findUserByEmail(email);
 
-        Intent intentParameter = new Intent("intentParameter")
-                .putExtra(KEY_EMAIL,email);
 
-        Intent intentCreateSpoiler = new Intent(Login.this,CreateSpoiler.class);
+
 
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("MyPref",0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -127,7 +125,6 @@ public class Login extends AppCompatActivity {
 
         editor.commit();
 
-        intentCreateSpoiler.putExtra("username",usersEntity.username);
     }
 
     private void accessCameraAcitivity() {

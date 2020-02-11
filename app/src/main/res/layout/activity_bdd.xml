@@ -34,8 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="101dp"
-        android:scrollbars="vertical"
-        android:text="TextView" />
+        android:scrollbars="vertical" />
 
     <Button
         android:id="@+id/buttoncreatespoiler"

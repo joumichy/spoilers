@@ -1,6 +1,7 @@
 package e.allou.spoilers;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,24 +18,33 @@ public class CustomAdapter extends BaseAdapter {
     LayoutInflater layoutInflater;
     int[]logos;
     int logo;
+    int key = 0;
     List<DataEntity> dataEntities;
-
+    List<Bitmap> bitmapList;
     public CustomAdapter(Context applicationContext, List<DataEntity> dataEntities){
         this.context = applicationContext;
         this.dataEntities = dataEntities;
+        layoutInflater = (LayoutInflater.from(applicationContext));
+    }
+    public CustomAdapter(Context applicationContext, List<Bitmap> bitmapList,int key){
+        this.context = applicationContext;
+        this.bitmapList = bitmapList;
+        this.key = key;
         layoutInflater = (LayoutInflater.from(applicationContext));
     }
 
     @Override
     public int getCount() {
         //Renvoie la taille
-        return dataEntities.size();
+        if (key == 0) return dataEntities.size();
+        else return bitmapList.size();
     }
 
     @Override
     public Object getItem(int position) {
         //Renvoie l'oobjet
-        return dataEntities.get(position);
+        if (key == 0) return dataEntities.get(position);
+        else  return bitmapList.get(position);
     }
 
     @Override
@@ -49,7 +59,8 @@ public class CustomAdapter extends BaseAdapter {
 
         TextView textView = new TextView(context);
         //textView.setText(String.valueOf(position));
-        textView.setText(dataEntities.get(position).titre);
+        if (key == 0) textView.setText(dataEntities.get(position).titre);
+        else textView.setText(bitmapList.get(position).toString());
         //ImageView icon = convertView.findViewById(R.id.gridViewSpoiler);//CHANGER ICON
         //icon.setImageResource(logo);
         return textView;

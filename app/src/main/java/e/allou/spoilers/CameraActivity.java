@@ -184,22 +184,30 @@ public class CameraActivity extends AppCompatActivity {
                                                 String newItem = item.getValue();
                                                 newItem = newItem.toLowerCase();
 
-                                                if(newItem.equals(titre) || newItem.contains(titre)){
+                                                if(newItem.equals(titre) || newItem.contains(titre) && justOne == 0){
                                                     Intent intentShowSpoiler = new Intent(CameraActivity.this,ShowSpoiler.class);
                                                     getSpoiler(titre);
                                                     intentShowSpoiler.putExtra(KEY_TITRE,spoilerTitre);
                                                     intentShowSpoiler.putExtra(KEY_SYNOPSIS,spoilerSynopsis);
                                                     intentShowSpoiler.putExtra("tag",TAG);
+                                                    intentShowSpoiler.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                    intentShowSpoiler.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                    justOne++;
+
                                                         //TODO: Reussir à lancer l'application q'une fois
-                                                        startActivity(intentShowSpoiler);
-                                                        justOne ++;
+                                                    startActivity(intentShowSpoiler);
+
+
+
+
+
 
                                                 }
                                             }
 
 
                                         }
-                                    },30);
+                                    },300);
 
 
                                 }
@@ -259,4 +267,6 @@ public class CameraActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 }

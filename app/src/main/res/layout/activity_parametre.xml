@@ -9,21 +9,26 @@
 
     <TextView
         android:id="@+id/parametre_nom_user"
-        android:text=""
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text=""
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/parametre_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_marginBottom="15dp"
+        android:text=""
+        android:textSize="24sp" />
 
     <ImageButton
 
         android:id="@+id/parametre_spoiler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:filterTouchesWhenObscured="false"
         android:foregroundGravity="center"
         android:onClick="startMySpoilerActivity"
@@ -37,7 +42,7 @@
     <Button
         android:id="@+id/deconnexion"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="bottom|center"
         android:onClick="logout"

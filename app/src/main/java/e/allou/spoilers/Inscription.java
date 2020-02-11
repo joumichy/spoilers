@@ -33,6 +33,7 @@ public class Inscription extends AppCompatActivity {
 
 
 
+
     private boolean passwordConfirmed = false;
 
 
