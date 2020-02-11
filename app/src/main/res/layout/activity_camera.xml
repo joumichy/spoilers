@@ -9,8 +9,7 @@
     <SurfaceView
         android:id="@+id/surfaceId"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="526dp" />
 
     <TextView
         android:id="@+id/textCameraId"
@@ -21,24 +20,29 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/buttonLoadBdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="15dp"
-        android:onClick="startbdd"
-        android:text="LoadBdd" />
-
-    <Button
         android:id="@+id/accessParameter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/buttonLoadBdd"
-        android:layout_marginBottom="84dp"
-        android:text="Parametre"
-        android:onClick="accessParameter"/>
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="95dp"
+        android:onClick="accessParameter"
+        android:text="Parametre" />
+
+    <Button
+        android:id="@+id/buttonLoadBdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="95dp"
+        android:layout_toEndOf="@+id/accessParameter"
+        android:onClick="startbdd"
+        android:text="LoadBdd" />
+
+
 
 </RelativeLayout>
