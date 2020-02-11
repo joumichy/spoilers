@@ -9,42 +9,69 @@
 
     <EditText
         android:id="@+id/editTextId"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="39dp"
+        android:layout_marginBottom="313dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="152dp"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:hint="@string/app_name"
         android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textdata"
+        android:layout_width="269dp"
+        android:layout_height="279dp"
+        android:layout_below="@+id/editTextId"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="-250dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextId"
+        app:layout_constraintVertical_bias="0.052" />
 
     <Button
         android:id="@+id/loadData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textdata"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="59dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="82dp"
+        android:layout_toEndOf="@+id/buttoncreatespoiler"
         android:onClick="loadNote"
         android:text="Load" />
-
-    <TextView
-        android:id="@+id/textdata"
-        android:layout_width="313dp"
-        android:layout_height="288dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="101dp"
-        android:scrollbars="vertical"
-        android:text="TextView" />
 
     <Button
         android:id="@+id/buttoncreatespoiler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textdata"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/loadData"
-        android:layout_marginStart="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="82dp"
         android:onClick="startcreatespoiler"
-        android:text="create" />
+        android:text="Create" />
+
+
+
+
 
 </RelativeLayout>

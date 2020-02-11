@@ -1,48 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Inscription">
+
     <EditText
         android:id="@+id/inscription_nom_user"
-        android:hint="Nom d'utilisateur"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="text"/>
+        android:layout_above="@+id/inscription_email"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="43dp"
+        android:hint="Nom d'utilisateur"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/inscription_email"
-        android:hint="@string/exemple_hotmail_fr"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:inputType="textEmailAddress"/>
+        android:layout_above="@+id/inscription_mot_de_passe"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="57dp"
+        android:hint="@string/exemple_hotmail_fr"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" />
 
     <EditText
         android:id="@+id/inscription_mot_de_passe"
-        android:hint="@string/password"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"/>
+        android:layout_above="@+id/inscription_confirme_mot_de_passe"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="43dp"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
     <EditText
         android:id="@+id/inscription_confirme_mot_de_passe"
-        android:hint="@string/confirmPassword"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        />
+        android:layout_above="@+id/button_confirmer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="42dp"
+        android:hint="@string/confirmPassword"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button_confirmer"
-        android:text="confirmer"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="submit"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="103dp"
+        android:onClick="submit"
+        android:text="confirmer" />
 
 
-
-
-</LinearLayout>
+</RelativeLayout>
